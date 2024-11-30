@@ -80,13 +80,14 @@ header {
 
 footer {
     background: #000;
-    top: 580px;
-    width: 95%;
-    height: 100px;
+    width: 97%;
+    align-self: center;
+    height: 70px;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     position: fixed;
+    bottom: 0;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
 }
