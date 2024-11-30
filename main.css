@@ -12,7 +12,6 @@ h1 {
 }
 
 ul {
-
     display: flex;
     justify-content: space-between;
 }
@@ -23,7 +22,11 @@ li {
     padding-inline-end: 60px;
 }
 
-.hamburger span {
+.hamburger {
+    align-items: flex;
+}
+
+.hamburger div {
     width: 35px;
     height: 5px;
     background-color: rgb(255, 255, 255);
@@ -108,7 +111,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #001e40;
+    background: #0b1118;
     z-index: 1000;
     flex-direction: column;
     justify-content: space-between;
@@ -121,7 +124,7 @@ footer {
     align-items: center;
     width: 100%;
     padding: 10px 20px;
-    background: #001a36;
+    background: #0b1118;
 }
 
 .close-btn {
@@ -141,11 +144,16 @@ footer {
 
 .fullscreen-footer {
     display: flex;
+    align-self: center;
     justify-content: space-around;
     width: 100%;
+    height: 70px;
     background: #03376c;
     padding: 10px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 }
+
 
 .fullscreen-footer button {
     background: none;
@@ -164,4 +172,119 @@ footer {
     .footer-menu button {
         font-size: 10px;
     }
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+.arrow-btn:focus {
+    outline: none;
+}
+
+
+
+.edit-controls {
+    position: absolute;
+    bottom: 100px;
+    left: 8%;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.edit-controls label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.edit-controls input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #ffffff;
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.edit-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.edit-controls input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+.share-controls {
+    position: absolute;
+    bottom: 100px;
+    right: 8%;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.share-controls button,
+.share-controls a {
+    margin: 5px 0;
+    color: white;
+    background: #007bff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.share-controls button:focus,
+.share-controls a:focus {
+    outline: none;
 }

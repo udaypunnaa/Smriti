@@ -40,14 +40,31 @@
 
     <div class="fullscreen-view" id="fullscreen-view">
         <div class="fullscreen-header">
-            <h1>Smriti</h1>
-            <button class="close-btn">&times;</button>
+            <button class="close-btn">&times;Close</button>
+            <button id="left-arrow" class="arrow-btn">←</button>
+            <button id="right-arrow" class="arrow-btn">→</button>
+            <!-- Sliders for brightness and contrast -->
+            <div class="edit-controls">
+                <label for="brightness-slider">Brightness:</label>
+                <input type="range" id="brightness-slider" min="0" max="200" value="100">
+
+                <label for="contrast-slider">Contrast:</label>
+                <input type="range" id="contrast-slider" min="0" max="200" value="100">
+            </div>
+            <!-- Share Controls -->
+            <div class="share-controls">
+                <button id="copy-link-btn">Copy Link</button>
+                <a href="#" id="share-twitter" target="_blank">Twitter</a>
+                <a href="#" id="share-facebook" target="_blank">Facebook</a>
+            </div>
         </div>
         <img src="" alt="Full Screen Image" class="fullscreen-img">
         <div class="fullscreen-footer">
-            <button>Edit</button>
-            <button>Share</button>
-            <button>Memorize</button>
+            <ul>
+                <li><img src="i4.png"><a id="edit-btn" class="edit-btn">Edit</a></li>
+                <li><img src="i5.png"><a id="share-btn" class="share-btn">Share</a></li>
+                <li><img src="i6.png">Memorize</li>
+            </ul>
         </div>
     </div>
 
