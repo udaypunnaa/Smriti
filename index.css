@@ -1,0 +1,41 @@
+/* General Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002a55;
+    /* Matches the dark blue background */
+    font-family: 'Arial', sans-serif;
+}
+
+.loading-container {
+    text-align: center;
+}
+
+.loading-text {
+    font-family: 'Old English Text MT', serif;
+    font-size: 5rem;
+    /* Default size */
+    color: #fff;
+    /* White text */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .loading-text {
+        font-size: 3rem;
+        /* Adjust font size for smaller screens */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .loading-text {
+        font-size: 2rem;
+        /* Further adjust for very small screens */
+    }
+}

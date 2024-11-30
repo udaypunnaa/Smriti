@@ -1,0 +1,166 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #002855;
+    color: #fff;
+}
+
+h1 {
+    text-align: left;
+    font-size: 30px;
+}
+
+ul {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    padding-inline-end: 60px;
+}
+
+.hamburger span {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+.gallery-img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Bento design for mobile */
+.gallery-img.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-img.medium {
+    grid-column: span 1;
+    grid-row: span 1.5;
+}
+
+.gallery-img.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+footer {
+    background: #000;
+    top: 580px;
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.footer-menu button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Fullscreen view */
+.fullscreen-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #001e40;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fullscreen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background: #001a36;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 70%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.fullscreen-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background: #03376c;
+    padding: 10px;
+}
+
+.fullscreen-footer button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-menu button {
+        font-size: 10px;
+    }
+}
