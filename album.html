@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Page</title>
+    <link rel="stylesheet" href="album.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Smriti Album</h1>
+    </header>
+    <main class="album">
+        <div class="album-grid">
+            <!-- Albums -->
+            <div class="album-item" onclick="openAlbum('Camera')">
+                <img src="https://via.placeholder.com/300x200" alt="Camera Album" class="album-photo">
+                <p class="album-label">Camera</p>
+            </div>
+            <div class="album-item" onclick="openAlbum('Screenshots')">
+                <img src="https://via.placeholder.com/300x200" alt="Screenshots Album" class="album-photo">
+                <p class="album-label">Screenshots</p>
+            </div>
+            <div class="album-item" onclick="openAlbum('WhatsApp Images')">
+                <img src="https://via.placeholder.com/300x200" alt="WhatsApp Images Album" class="album-photo">
+                <p class="album-label">WhatsApp Images</p>
+            </div>
+        </div>
+
+        <!-- Album detail view -->
+        <div class="album-detail" id="albumDetail">
+            <button class="close-button" onclick="closeAlbum()">×</button>
+            <h2 id="albumTitle"></h2>
+            <div class="photo-grid" id="photoGrid"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <button class="nav-button" onclick="navigateTo('photos')">Photos</button>
+        <button class="nav-button" onclick="navigateTo('album')">Album</button>
+        <button class="nav-button" onclick="navigateTo('memorize')">Memorize</button>
+    </footer>
+    <script src="album.js"></script>
+</body>
+
+</html>

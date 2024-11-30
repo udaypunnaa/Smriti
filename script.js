@@ -16,5 +16,5 @@ window.addEventListener('load', () => {
     // After 2-3 seconds, redirect to frame1.html
     setTimeout(() => {
         window.location.href = 'frame1.html'; // Replace with your desired page
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 10000); // 3000 milliseconds = 3 seconds
 });
