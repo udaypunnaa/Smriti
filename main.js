@@ -127,3 +127,51 @@ function hideShareControls() {
 // Event listeners for sliders
 brightnessSlider.addEventListener('input', updateImageStyles);
 contrastSlider.addEventListener('input', updateImageStyles);
+
+
+// Songs for each mood
+const moodSongs = {
+    happy: {
+        title: "Happy Song",
+        src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    },
+    sad: {
+        title: "Sad Song",
+        src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    },
+    calm: {
+        title: "Calm Song",
+        src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    },
+};
+
+// Memorize a photo
+function memorizePhoto(button) {
+    const photoContainer = button.closest(".photo-container");
+    const photo = photoContainer.querySelector(".photo");
+    const mood = photo.getAttribute("data-mood");
+    const song = moodSongs[mood];
+
+    if (song) {
+        const songTitle = document.getElementById("songTitle");
+        const audioPlayer = document.getElementById("audioPlayer");
+        const songPlayer = document.getElementById("songPlayer");
+
+        songTitle.textContent = `Playing: ${song.title}`;
+        audioPlayer.src = song.src;
+        audioPlayer.play();
+
+        songPlayer.classList.remove("hidden");
+    } else {
+        alert("No song available for this mood!");
+    }
+}
+
+// Placeholder for other actions
+function editPhoto() {
+    alert("Edit functionality goes here!");
+}
+
+function sharePhoto() {
+    alert("Share functionality goes here!");
+}

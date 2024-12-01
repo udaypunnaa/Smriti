@@ -89,13 +89,35 @@ body {
     cursor: pointer;
 }
 
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    padding-inline-end: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 /* Footer */
-.footer {
+footer {
+    background: #000;
+    width: 97%;
+    align-self: center;
+    height: 70px;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
-    background-color: #001d42;
-    border-top: 1px solid #fff;
+    position: fixed;
+    bottom: 0;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
 }
 
 .nav-button {

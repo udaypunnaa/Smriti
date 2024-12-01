@@ -63,11 +63,15 @@
             <ul>
                 <li><img src="i4.png"><a id="edit-btn" class="edit-btn">Edit</a></li>
                 <li><img src="i5.png"><a id="share-btn" class="share-btn">Share</a></li>
-                <li><img src="i6.png">Memorize</li>
+                <!--<li><img src="i6.png"><a onclick="memorizePhoto(this)">Memorize</a></li>-->
+                <button class="action-button" onclick="memorizePhoto(this)">Memorize</button>
             </ul>
         </div>
     </div>
-
+    <div id="songPlayer" class="hidden">
+        <h2 id="songTitle">Playing: </h2>
+        <audio id="audioPlayer" controls></audio>
+    </div>
     <script src="main.js"></script>
 </body>
 

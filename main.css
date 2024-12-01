@@ -288,3 +288,38 @@ footer {
 .share-controls a:focus {
     outline: none;
 }
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.photo-actions {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+    visibility: hidden;
+}
+
+.photo-container:hover .photo-actions {
+    visibility: visible;
+}
+
+.action-button {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}

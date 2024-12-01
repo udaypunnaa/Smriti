@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorize Photos</title>
+    <link rel="stylesheet" href="memorize.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Memorize Photos</h1>
+    </header>
+    <main class="memorize-container">
+        <div id="photoList">
+            <!-- Example photos -->
+            <img src="R.jpg" alt="Happy Photo" class="photo" data-mood="happy">
+            <img src="https://via.placeholder.com/300x200" alt="Sad Photo" class="photo" data-mood="sad">
+            <img src="https://via.placeholder.com/300x200" alt="Calm Photo" class="photo" data-mood="calm">
+        </div>
+        <div id="songPlayer" class="hidden">
+            <h2 id="songTitle">Playing: </h2>
+            <audio id="audioPlayer" controls></audio>
+        </div>
+    </main>
+    <footer class="footer">
+        <button class="nav-button" onclick="navigateTo('photos')"><img src="i1.png">Photos</button>
+        <button class="nav-button" onclick="navigateTo('album')"><img src="i2.png">Album</button>
+        <button class="nav-button" onclick="startMemorize()"><img src="i3.png">Memorize</button>
+    </footer>
+    <script src="memorize.js"></script>
+</body>
+
+</html>
