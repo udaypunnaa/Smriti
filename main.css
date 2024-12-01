@@ -323,3 +323,8 @@ footer {
     background: rgba(255, 255, 255, 0.8);
     color: #000;
 }
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
